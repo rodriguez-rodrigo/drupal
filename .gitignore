@@ -1,0 +1,6 @@
+.idea
+vendor
+
+# Drupal
+web/core
+web/sites/*/files
