@@ -1,0 +1,6 @@
+name: Client
+type: module
+description: 'Client module'
+core_version_requirement: ^10
+dependencies:
+  - drupal:views
