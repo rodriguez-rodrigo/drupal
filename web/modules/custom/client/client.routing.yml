@@ -1,0 +1,47 @@
+client.add:
+  path: '/clients/create'
+  defaults:
+    _entity_form: client.add
+    _title: 'Add Client'
+  requirements:
+    _entity_create_access: 'client'
+
+entity.client.edit_form:
+  path: '/clients/{client}/edit'
+  defaults:
+    _entity_form: client.edit
+    _title: 'Edit Client'
+  requirements:
+    _entity_access: 'client.edit'
+
+entity.client.delete_form:
+  path: '/clients/{client}/delete'
+  defaults:
+    _entity_form: client.delete
+    _title: 'Delete Client'
+  requirements:
+    _entity_access: 'client.delete'
+
+entity.client.canonical:
+  path: '/clients/{client}'
+  defaults:
+    _entity_view: 'client'
+    _title: 'Client'
+  requirements:
+    _entity_access: 'client.view'
+
+entity.client.collection:
+  path: '/clients'
+  defaults:
+    _entity_list: 'client'
+    _title: 'Clients'
+  requirements:
+    _entity_access: 'client.list'
+
+entity.client.settings:
+  path: '/admin/structure/client'
+  defaults:
+    _form: '\Drupal\client\Form\ClientSettingsForm'
+    _title: 'Client settings'
+  requirements:
+    _permission: 'administer own clients'
